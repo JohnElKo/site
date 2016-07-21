@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<!-- <script>
+(function(w, d, s, h, id) {
+    w.roistatProjectId = id; 
+    w.roistatHost = h;
+    var p = d.location.protocol == "https:" ? "https://" : "http://";
+    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+    var js = d.createElement(s); 
+    js.async = 1;
+    js.src = p+h+u; 
+    var js2 = d.getElementsByTagName(s)[0]; 
+    s2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', 'e2c093e51ad59535b3c5e840150a1bf9');
+</script> -->
+
+<form action="roistat/auth.php" method="post">
+<br>
+Имя: <input type="text" name="name">
+<br>
+Телефон: <input type="text" name="phone">
+<br>
+email: <input type="text" name="email">
+<br>
+Цена: <input type="text" name="price">
+<br>
+Комментарий: <input type="text" name="comment">
+<br>
+<input type="submit" value="Отправить">
+</form>
+
+</body>
+</html> 
