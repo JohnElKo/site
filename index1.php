@@ -28,25 +28,6 @@
 	mysqli_select_db($connect_to_db, $db_name)
 	or die("Could not select DB: " . mysqli_error());
 
-
-	if ($_POST['Name1'] != '' && $_POST['Date1'] != '' && isset($_POST['Name1']) && isset($_POST['Date1'])) {
-    // Добавляем запись в таблицу "table1"
-		$qr_add = mysqli_query ($connect_to_db, "INSERT INTO table1 (id, Name, Date, content) values ('".$_POST['id1']."', '".$_POST['Name1']."', '".$_POST['Date1']."', '".$_POST['content1']."')")
-		or die(mysqli_error());
-	}
-
-	if ($_POST['ID1'] != '' && isset($_POST['ID1'])) {
-    // Удаляем запись из таблицы "table1"
-		$qr_delete = mysqli_query ($connect_to_db, "DELETE FROM table1 where id = ".$_POST['ID1'])
-		or die(mysqli_error());
-	}
-
-		if ($_POST['id2'] != '' && $_POST['Name2'] != '' && $_POST['Date2'] != '' && isset($_POST['id2']) && isset($_POST['Name2']) && isset($_POST['Date2'])) {
-    // Изменяем запись в таблице "table1"
-		$qr_update = mysqli_query ($connect_to_db, "UPDATE table1 SET Name = '".$_POST['Name2']."', Date = '".$_POST['Date2']."', content = '".$_POST['content1']."'  where id = '".$_POST['id2']."'")
-		or die(mysqli_error());
-	}
-
 	if (isset($_POST['pName']) == false || $_POST['pName'] == 'all' || $_POST['pName'] =='') {
     // выбираем все значения из таблицы "table1"
 		$qr_result = mysqli_query($connect_to_db, "select * from " . $db_table_to_show)
